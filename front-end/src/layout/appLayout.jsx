@@ -1,17 +1,17 @@
-// AppLayout.js
-import React from 'react';
-import { Outlet } from 'react-router-dom';
-
+import React from 'react'
+import { Outlet } from 'react-router-dom'
+import Header from '../Component/header'
 const AppLayout = () => {
   return (
-    <div>
-      <header>My App Header</header>
-      <main>
-        <Outlet /> {/* Renders the child routes here */}
-      </main>
-      <footer>My App Footer</footer>
+    <div className='bg-gray-950 text-white min-h-screen'>
+    <div className='container px-6 py-4 mx-auto'>
+    <Header/>
+    <main>
+        <Outlet/>
+    </main>
     </div>
-  );
-};
+    </div>
+  )
+}
 
-export default AppLayout;
+export default AppLayout
