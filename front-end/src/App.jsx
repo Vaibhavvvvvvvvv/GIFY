@@ -1,4 +1,5 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom"
+import GifProvider from "./context/gifContext"
 import "./App.css"
 import AppLayout from "./layout/AppLayout"
 import Categories from "./pages/Categories"
@@ -43,7 +44,9 @@ const App = () => {
   return (
     <>
       <div>
+        <GifProvider>
         <RouterProvider router={router}/>
+        </GifProvider>
       </div>
     </>
   )
