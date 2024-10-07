@@ -3,12 +3,13 @@ import { GifState } from '../context/gifContext';
 import { Link } from 'react-router-dom';
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { HiBars3BottomRight } from "react-icons/hi2"; // Correct import for the HiBars3BottomRight icon
+import Search from './Search';
 
 const Header = () => {
   const [categories, setCategories] = useState([]); // This is okay
   const [showCategories, setShowCategories] = useState(false); // Initialize with a boolean value
 
-  const { gif, filter, setFilter, favorites } = GifState();
+  const { gif, favorites } = GifState();
 
 
   const fetchHifCategory = async () => {
@@ -76,6 +77,7 @@ const Header = () => {
             </div>
           )}
       </div>
+      <Search/>
     </nav>
   );
 };
